@@ -53,6 +53,7 @@ class PresetsController < OpenReadController
 
   def preset_params
     params.require(:preset).permit(:name, :rain, :fire, :thunder, :crickets, :birds, :coffee, :waves, :bowl)
+  end
 
   private :set_preset, :preset_params
 end
