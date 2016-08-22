@@ -4,7 +4,12 @@ class PresetsController < OpenReadController
   # GET /presets
   # GET /presets.json
   def index
-    @presets = Preset.all
+    # @presets = Preset.all
+    if params[:user_presets] == "true"
+      @presets = current_user.presets
+    else
+      @presets = Preset.all
+    end
 
     render json: @presets
   end
@@ -48,7 +53,8 @@ class PresetsController < OpenReadController
 
   def set_preset
     # @preset = Preset.find(params[:id])
-    @preset = current_user.presets.find(params[:id])
+    # @preset = current_user.presets.find(params[:id])
+    @preset = current_user.presets.find(:user_id)
   end
 
   def preset_params
