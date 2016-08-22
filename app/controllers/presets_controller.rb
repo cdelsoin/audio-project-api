@@ -36,6 +36,8 @@ class PresetsController < OpenReadController
   # PATCH/PUT /presets/1
   # PATCH/PUT /presets/1.json
   def update
+    # @preset = current_user.presets.find(params[:id])
+
     if @preset.update(preset_params)
       head :no_content
     else
@@ -52,9 +54,8 @@ class PresetsController < OpenReadController
   end
 
   def set_preset
-    # @preset = Preset.find(params[:id])
+    @preset = Preset.find(params[:id])
     # @preset = current_user.presets.find(params[:id])
-    @preset = current_user.presets.find(:user_id)
   end
 
   def preset_params
