@@ -1,6 +1,9 @@
-Deployed API http://ambient-sounds-api.herokuapp.com/
-Deployed APP https://cdelsoin.github.io/ambient-sounds/
-APP Repository https://github.com/cdelsoin/ambient-sounds
+## Deployed API
+http://ambient-sounds-api.herokuapp.com/
+## Deployed APP
+https://cdelsoin.github.io/ambient-sounds/
+## APP Repository
+https://github.com/cdelsoin/ambient-sounds
 
 # An Ambient Sounds data store API
 
